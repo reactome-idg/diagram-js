@@ -5,6 +5,7 @@
 
     <!-- Other module inherits                                      -->
     <inherits name="org.reactome.web.diagram.DiagramViewer"/>
+    <inherits name='org.reactome.web.fi.IDGDiagram' />
     <inherits name='org.timepedia.exporter.Exporter'/>
     <set-property name="export" value="yes"/>
 

@@ -73,11 +73,11 @@
             <artifactId>gwt-servlet</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.reactome.web</groupId>
-            <artifactId>diagram</artifactId>
-            <version>${diagram.gwt}</version>
-        </dependency>
+		<dependency>
+			<groupId>org.reactome.web</groupId>
+			<artifactId>idg-diagram</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
         <dependency>
             <groupId>org.timepedia.exporter</groupId>

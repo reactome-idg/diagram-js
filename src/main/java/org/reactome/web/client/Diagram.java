@@ -13,6 +13,7 @@ import org.reactome.web.client.model.JsProperties;
 import org.reactome.web.diagram.client.DiagramFactory;
 import org.reactome.web.diagram.client.DiagramViewer;
 import org.reactome.web.diagram.data.graph.model.GraphObject;
+import org.reactome.web.fi.client.IdgDiagramViewerImpl;
 import org.reactome.web.pwp.model.client.content.ContentClient;
 import org.timepedia.exporter.client.Export;
 import org.timepedia.exporter.client.ExportPackage;
@@ -27,7 +28,7 @@ import org.timepedia.exporter.client.Exportable;
 @Export("Diagram")
 public class Diagram implements Exportable {
 
-    private static final String SERVER = "https://reactome.org";
+    private static final String SERVER = "https://idg.reactome.org";
 
     private static Diagram viewer;
 
@@ -80,6 +81,8 @@ public class Diagram implements Exportable {
             DiagramFactory.SHOW_FIREWORKS_BTN = false;
             DiagramFactory.RESPOND_TO_SEARCH_SHORTCUT = false;
             DiagramFactory.SCROLL_SENSITIVITY = 500;
+            DiagramFactory.WATERMARK_BASE_URL = SERVER+"/PathwayBrowser";
+            DiagramFactory.setDiagramViewerCreator(() -> new IdgDiagramViewerImpl());
             diagram = DiagramFactory.createDiagramViewer();
             diagram.asWidget().getElement().getStyle().setProperty("height", "inherit");
 
